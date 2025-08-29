@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iabhi-me.github.io/marklive/sitemap.xml

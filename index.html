@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="Nyl0CBSnMsGhr4ldgSKgvZyrvrkp0YttjiY7q5uJD6Y" />
+
+    <!-- Primary Meta Tags -->
+    <title>MarkLive — Markdown to HTML Live Preview</title>
+    <meta name="title" content="MarkLive — Markdown to HTML Live Preview" />
+    <meta name="description" content="A lightweight, browser-based Markdown editor with live HTML preview, themes, syntax highlighting, and export options." />
+    <meta name="author" content="Abhinav" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://iabhi-me.github.io/marklive/" />
+    <meta property="og:title" content="MarkLive — Markdown to HTML Live Preview" />
+    <meta property="og:description" content="A lightweight, browser-based Markdown editor with live HTML preview, themes, syntax highlighting, and export options." />
+    <meta property="og:image" content="https://iabhi-me.github.io/marklive/assets/preview.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://iabhi-me.github.io/marklive/" />
+    <meta name="twitter:title" content="MarkLive — Markdown to HTML Live Preview" />
+    <meta name="twitter:description" content="A lightweight, browser-based Markdown editor with live HTML preview, themes, syntax highlighting, and export options." />
+    <meta name="twitter:image" content="https://iabhi-me.github.io/marklive/assets/preview.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.png" />
+
+    <!-- Theme Color for Mobile -->
+    <meta name="theme-color" content="#7c3aed" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Prism.js for Syntax Highlighting -->
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/themes/prism.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <header>
+        <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#3b82f6);display:flex;align-items:center;justify-content:center;font-weight:700;color:white">MD</div>
+            <div class="header-text">
+                <h1>Markdown → HTML (Live)</h1>
+                <p>Type markdown on the left — preview updates as you type.</p>
+            </div>
+        </div>
+        <div style="display:flex;gap:8px">
+            <button id="btn-preview" class="btn small">Preview Only</button>
+            <button id="theme-toggle" class="btn small">🌑</button>
+        </div>
+    </header>
+
+        <main class="wrap">
+            <section class="panel">
+                <div class="controls">
+                    <button class="btn" data-action="bold" title="Bold (Ctrl/Cmd+B)"><strong>B</strong></button>
+                    <button class="btn" data-action="italic" title="Italic (Ctrl/Cmd+I)"><em>I</em></button>
+                    <button class="btn" data-action="h1" title="Heading">H1</button>
+                    <button class="btn" data-action="h2" title="Heading">H2</button>
+                    <button class="btn" data-action="code" title="Inline code">{ }</button>
+                    <button class="btn" data-action="codeblock" title="Code block">```</button>
+                    <button class="btn" data-action="ul" title="Unordered list">• List</button>
+                    <button class="btn" data-action="ol" title="Ordered list">1. List</button>
+                    <button class="btn" id="btn-copy" title="Copy HTML">Copy HTML</button>
+                    <button class="btn" id="btn-export" title="Download HTML">Export .html</button>
+                    <button class="btn" id="btn-highlight" title="Toggle Syntax Highlighting">Highlight</button>
+                </div>
+
+                <textarea id="md" placeholder="# Start typing Markdown..." spellcheck="false"></textarea>
+            </section>
+
+            <section class="panel">
+                <div class="meta">
+                    <div class="hint">Preview</div>
+                    <div style="color:var(--muted);font-size:13px" id="status">Ready</div>
+                </div>
+                <div class="preview" id="preview" aria-live="polite"></div>
+            </section>
+        </main>
+
+        <footer>
+            Simple Markdown-to-HTML converter. Supports headings, bold, italic, links, images, lists, code blocks, inline code, blockquotes and horizontal rules.
+        </footer>
+        <script src="assets/js/script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/prism.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/components/prism-javascript.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/components/prism-python.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1.25.0/components/prism-markup.min.js"></script>
+    </body>
+</html>
